@@ -1,0 +1,47 @@
+import api from "./api";
+
+
+export const loginUser = async(data)=>{
+
+    const response =
+    await api.post(
+        "/auth/login",
+        data
+    );
+
+
+    return response.data;
+
+};
+
+
+
+export const registerUser = async(data)=>{
+
+
+const response =
+await api.post(
+
+"/auth/register",
+
+data,
+
+{
+
+headers:{
+
+"Content-Type":
+"multipart/form-data"
+
+}
+
+}
+
+);
+
+
+
+return response.data;
+
+
+};
